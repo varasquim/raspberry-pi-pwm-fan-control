@@ -1,7 +1,7 @@
-FROM fedora:latest
+FROM debian:latest
 
-RUN  dnf -y update
-RUN  dnf -y install libgpiod-utils python3-libgpiod swig python2 python-setuptools python-devel python3-devel python-setuptools python3-setuptools unzip curl wget make gcc which git
+RUN  apt-get -y update
+RUN  apt-get -y install libgpiod-utils python3-libgpiod swig python2 python-setuptools python-devel python3-devel python-setuptools python3-setuptools unzip curl wget make gcc which git
 
 RUN  mkdir -p /tmp; \
      git clone https://github.com/joan2937/lg; \
